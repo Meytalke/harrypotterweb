@@ -1,0 +1,88 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('background.png');
+  background-size: cover; 
+  background-color: #fff; 
+}
+
+.tab {
+  display: none;
+  padding: 20px;
+}
+header {
+  background-color: #b79b48;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+
+nav {
+  background-color: #584a22;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 50px;
+  margin: 0 5px;
+}
+
+section {
+  padding: 20px;
+}
+
+.pdf-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px; 
+}
+
+.book-button {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.book-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(230, 153, 115, 0.5), rgba(230, 153, 115, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.book-button:hover::before {
+  opacity: 1;
+}
+
+.book-button:hover {
+  background-color: #ddd;
+}
+
+.book-button img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book-button span {
+  text-align: center;
+}
